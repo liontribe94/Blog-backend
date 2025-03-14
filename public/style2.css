@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+} 
+.form{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#identity{
+    height: 30px;
+    width: 200px;
+}
+.firsth1{
+    color:green;
+}
+
+.submitbtn{
+    height: 40px;
+    width: 70px;
+    color: white;
+    background-color: green;
+    
+}
+.divbtn{
+    margin-left: 50px;
+}
