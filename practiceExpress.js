@@ -18,7 +18,7 @@ const { blogData, getPosts } = require('./controllers/Postcontrollers')
 const { commentData, fetchComment1, deleteComment1, updateComment1 } = require('./controllers/commentcontroller')
 
 app.use(cors({
-    origin:"https://chin-blog.onrender.com"
+    origin:"http://localhost:5173/"
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
