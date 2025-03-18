@@ -40,7 +40,7 @@ const getPosts = async (req,res)=>{
     
         if(!myposts) return res.send("post not found") 
              
-        res.send(myposts) 
+        res.status(200).json(myposts)
         
     } catch (error) {
         console.log(`Error while getting post : ${error}`)
