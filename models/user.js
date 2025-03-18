@@ -7,7 +7,7 @@ fullname:{
     require:true
 },
 phone:{
-    type:Number,
+    type:String,
     require:true
 },
 email:{

@@ -24,9 +24,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
 
-app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname,'box1','register.html'))
-})
+// app.get('/',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'box1','register.html'))
+// })
 
 app.use('/user',userRoutes)
 app.use('/post',postRoutes)
@@ -49,13 +49,6 @@ console.log("routes connected")
 // app.put('/user/:id',updateOneUser)
 // app.put('/comment/:id',updateComment1)
 
-app.post('/user/login',(req,res)=>{
-
-})
-
-app.get('/user',(req,res)=>{
-
-})
 
 app.listen(port,()=>{
     console.log(`server is running on port ${port}`)
