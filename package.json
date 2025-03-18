@@ -1,7 +1,7 @@
 {
   "name": "node-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "practiceExpress.js",
   "scripts": {
     "start":"node practiceExpress.js",
     "code": "nodemon practiceExpress.js",
