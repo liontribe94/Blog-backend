@@ -1,7 +1,7 @@
 const express = require('express')
 const { commentData, fetchComment1, deleteComment1, updateComment1 } = require('../controllers/commentcontroller')
 const router = express.Router()
-const authorize = require('../authorize')
+const authorize = require('../authorize2')
 
 router.post('/:userId/:postId',authorize(['admin','user']),commentData)
 

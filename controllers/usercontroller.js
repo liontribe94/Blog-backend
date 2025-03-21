@@ -34,7 +34,7 @@ const signUp = async (req,res)=>{
     
 }
 
-const signIn = async(req,res)=>{
+const signIn = async (req,res)=>{
     try {
         const {email,password} = req.body
         const checkEmail = await User.findOne({email})
@@ -47,7 +47,14 @@ const signIn = async(req,res)=>{
             return res.send('incorrect password')
         }
 
-        const token = jwt.sign({id:checkEmail._id,role:checkEmail.role}, process.env.SECRETKEY, {expiresIn:'8hrs'});
+        const token = jwt.sign({id:checkEmail._id,role:checkEmail.role}, process.env.SECRETKEY, {expiresIn:'8h'});
+        res.cookie("token",token, {
+            httpOnly:true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "strict"
+
+        })
+
 
         res.json({message:"Login successful", token})
         
