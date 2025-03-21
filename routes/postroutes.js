@@ -7,6 +7,6 @@ router.post('/:userId',authorize(['admin','user']),blogData)
 router.get('/allposts',getPosts)
 router.get('/:postId',getOnePost)
 router.delete('/:postId',authorize(['admin']),delPost)
-router.put('/:id',authorize(['admin']),updatePost)
+router.put('/:id',authorize(['user']),updatePost)
 
 module.exports = router
