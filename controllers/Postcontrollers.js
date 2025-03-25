@@ -91,7 +91,9 @@ const updatePost = async (req,res)=>{
 
         if(!updatedPost) return res.json({message:"post update not found"})
         res.json({message:"post updated sucessfully"})
-    console.log(newData)
+        console.log("Works")
+        console.log(newData)
+        console.log(updatedPost)
             // res.send(newData)
     } catch (error) {
         console.log(`Error while updating post :${error}`)

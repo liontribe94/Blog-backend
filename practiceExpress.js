@@ -16,13 +16,16 @@ const cors = require('cors')
 const { signUp, signIn, getUsers, oneUser, twoUser, updateOneUser } = require('./controllers/usercontroller')
 const { blogData, getPosts } = require('./controllers/Postcontrollers')
 const { commentData, fetchComment1, deleteComment1, updateComment1 } = require('./controllers/commentcontroller')
+const cookieParser = require('cookie-parser')
 
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:"http://localhost:5173",
+    credentials: true 
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
+app.use(cookieParser());  
 
 // app.get('/',(req,res)=>{
 //     res.sendFile(path.join(__dirname,'box1','register.html'))

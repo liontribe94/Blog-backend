@@ -2,8 +2,11 @@ const jwt = require('jsonwebtoken')
 
 const authorize = (allowedRoles)=>(req,res,next)=>{
     // console.log('Authorize middleware triggered')
+    console.log('Cookies:', req.cookies);
+
     const token = req.cookies?.token
     console.log(token)
+    console.log("no token")
     if(!token) return res.status(403).send('Access denied, No token provided')
     
     try {
